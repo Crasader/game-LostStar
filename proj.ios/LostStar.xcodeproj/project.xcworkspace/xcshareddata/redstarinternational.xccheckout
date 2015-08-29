@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9C1F6B95-BC25-49B7-985E-04187F70A984</string>
+	<key>IDESourceControlProjectName</key>
+	<string>redstarinternational</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4ec94a77-c873-427a-b97e-9c779146d3a1++1746</key>
+		<string>svn://192.168.2.10:9999/games/trunk/Redstar%2525252525252525252525252525252525252525252525252525252525252525252525252525252520International/Project</string>
+		<key>4ec94a77-c873-427a-b97e-9c779146d3a1++6657</key>
+		<string>svn://192.168.2.10:9999/games/trunk/_engine/2dx/2.2.6</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PickUpTheStar_New/proj.ios/redstarinternational.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4ec94a77-c873-427a-b97e-9c779146d3a1++1746</key>
+		<string>../../../..</string>
+		<key>4ec94a77-c873-427a-b97e-9c779146d3a1++6657</key>
+		<string>../../../.._cocos2dx</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>4ec94a77-c873-427a-b97e-9c779146d3a1++1746</key>
+		<string>svn://192.168.2.10:9999/games</string>
+		<key>4ec94a77-c873-427a-b97e-9c779146d3a1++6657</key>
+		<string>svn://192.168.2.10:9999/games</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://192.168.2.10:9999/games/trunk/Redstar%2525252525252525252525252525252525252525252525252525252525252525252525252525252520International/Project/PickUpTheStar_New/proj.ios/redstarinternational.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4ec94a77-c873-427a-b97e-9c779146d3a1++1746</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4ec94a77-c873-427a-b97e-9c779146d3a1++1746</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Redstar_International</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4ec94a77-c873-427a-b97e-9c779146d3a1++6657</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Redstar_International_cocos2dx</string>
+		</dict>
+	</array>
+</dict>
+</plist>

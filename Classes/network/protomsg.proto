@@ -1,0 +1,131 @@
+package Star;
+option optimize_for = LITE_RUNTIME;
+
+
+
+//***********        同步        ***********//
+//平台类型
+enum PlatformType {
+    PlatformType_Invalid 	        = 0;	//无效类型
+    PlatformType_Common		        = 1;	//通用
+    PlatformType_Facebook           = 2;	//Facebook
+}
+
+//账户信息
+message AccountInfo {
+    required PlatformType platform  = 1;    //关联平台类型
+    required string account         = 2;    //账户名
+}
+
+//关卡信息
+message TaskInfo {
+    required int64 task_id          = 1;    //关卡id
+    optional int32 star             = 2;    //三星评星数
+    optional int32 score            = 3;    //当前玩家的分数
+    optional int32 highest_score    = 4;    //全球玩家最高分
+    optional int32 average_score    = 5;    //平均分
+    optional int32 player_count     = 6;    //玩家数
+}
+
+//解法信息
+message SolutionInfo {
+    required int64 task_id          = 1;    //关卡id
+    optional int32 star             = 2;    //三星评星数
+    optional int32 score            = 3;    //关卡分数
+    optional string solution_id     = 4;    //解法id
+    optional int32 tag              = 5;    //标签(暂时未用)
+    optional int32 download_times   = 6;    //下载次数
+    optional int32 up_times         = 7;    //被赞次数
+    optional bytes data             = 8;    //解法内容 
+}
+
+//同步请求包
+message SyncReq { 
+    required AccountInfo acc        = 1;    //账户
+    repeated TaskInfo task          = 2;    //关卡信息
+}
+
+//同步回应包
+message SyncRsp { 
+    required int32 rsp_code         = 1;    
+    repeated TaskInfo need_up_task  = 2;    //需要客户端上传解法的关卡信息
+    repeated SolutionInfo down_task = 3;    //需要客户端更新的关卡
+}
+
+
+
+//***********        关卡        ***********//
+//上传关卡信息请求包
+message UploadTaskInfoReq { 
+    required AccountInfo acc        = 1;    //账户
+    repeated TaskInfo task          = 2;    //关卡信息
+}
+
+//上传关卡信息回应包
+message UploadTaskInfoRsp { 
+    required int32 rsp_code         = 1;    
+}
+
+
+
+//***********        解法信息        ***********//
+//上传解法信息请求包
+message UploadSolutionReq { 
+    required AccountInfo acc        = 1;    //账户
+    repeated SolutionInfo solution  = 2;    //解法信息
+}
+
+//上传解法信息回应包
+message UploadSolutionRsp { 
+    required int32 rsp_code         = 1;    
+}
+
+//下载解法请求包
+message DownloadSolutionReq { 
+    required AccountInfo acc        = 1;    //下载账户
+    optional string solution_id     = 2;    //解法id
+}
+
+//下载解法回应包
+message DownloadSolutionRsp { 
+    required int32 rsp_code         = 1;    
+    optional SolutionInfo soulution = 2;    //解法信息
+}
+
+//点赞解法请求包
+message UpSolutionReq { 
+    required AccountInfo acc        = 1;    //下载账户
+    optional string solution_id     = 2;    //解法id
+    optional bool is_up             = 3;    //true:赞 
+}
+
+//点赞解法回应包
+message UpSolutionRsp { 
+    required int32 rsp_code         = 1;    
+    optional SolutionInfo soulution = 2;    //解法信息
+}
+
+
+//***********        好友        ***********//
+//好友信息
+message FriendsInfo {
+    required string account         = 1;    //好友账户
+    repeated SolutionInfo solution  = 2;    //解法信息 
+}
+
+
+//查询好友信息请求包
+message QueryFriendsInfoReq { 
+    required PlatformType platform  = 1;    //关联平台类型
+    repeated string account_list    = 2;    //账号列表
+    repeated int64 task_list        = 3;    //关卡列表
+}
+
+//查询好友信息回应包
+message QueryFriendsInfoRsp { 
+    required int32 rsp_code         = 1;   
+    repeated TaskInfo task          = 2;    //关卡信息
+    repeated FriendsInfo friend     = 3;    //好友信息
+}
+
+
